@@ -93,3 +93,50 @@ li a:hover {
     transform-origin: left;
     transform: scaleX(1);
 }
+
+button { 
+    width: 100%;
+    padding:10px 20px;
+    border:none;
+    border-radius: 5px;
+    background-color: #cad2c5;
+    font-size: 20px;
+    font-family: 'Courier', sans-serif;
+  }
+  
+  button:hover {
+    background-color:#e9edca;
+  }
+  
+  button:active,
+  button:focus {
+    background-color: #e9edca;
+    color: white;
+  }
+
+
+    .home {
+        display: flex;
+        align-items: center;
+        padding: 50px;
+        background-color: #e7e9be;
+    }
+    
+    .home-content {
+        max-width: 500px;
+    }
+    
+    .home-content h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .home-content p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+
+    .home-image {
+        height: 70%;
+        width: 70%;
+    }
