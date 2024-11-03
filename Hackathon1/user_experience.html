@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Experience</title>
+    <link rel="stylesheet" href="userstyle.css">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="interactivemap.html">Map</a>
+        <a href="translator.html">Translate</a>
+        <a href="user_experience.html">User Experience</a>
+        
+    </nav>
+    
+        <div class="travel-section">
+            <img src="travel.jpg" alt="Plane Flying" class="travel-image">
+            <div class="travel-text">
+                <h2>Travel the World</h2>
+                <p>See what the world has to offer.<br>
+                Share your thoughts and see what others have to say!<br>
+                you are a ehin a beru have ad a stored.</p>
+            </div>
+        </div>
+        
+    <div class="container">
+        <h1>Post Your Thoughts</h1>
+        
+        <div class="input-section">
+            <input type="text" id="userName" placeholder="Your name">
+            <input type="text" id="userInput" placeholder="Write something...">
+            <button onclick="postInput()">Post</button>
+        </div>
+
+        <div id="postsContainer">
+            <h2>Your Posts</h2>
+        </div>
+    </div>
+
+    <script>
+        function postInput() {
+            const name = document.getElementById("userName").value;
+            const message = document.getElementById("userInput").value;
+
+            if (name.trim() === "" || message.trim() === "") {
+                alert("Please enter something to post.");
+                return;
+            }
+
+            const postDiv = document.createElement("div");
+            postDiv.classList.add("post");
+           
+            postDiv.innerHTML = `<strong>${name}:</strong> ${message}`;
+
+            const postsContainer = document.getElementById("postsContainer");
+            postsContainer.appendChild(postDiv);
+
+            document.getElementById("userName").value = "";
+            document.getElementById("userInput").value = "";
+        }
+    </script>
+</body>
+</html>
